@@ -23,7 +23,7 @@ class EditComponent {
      * Construct an Add Component.
      *
      * @param backbone
-     * @param collection
+     * @param model
      * @return {*}
      */
     constructor(backbone = null, model = null) {
@@ -55,7 +55,6 @@ class EditComponent {
                             format: $('#format'),
                         };
 
-                        const createData = {};
                         Object.keys(data).forEach((value) => model.set(value, data[value].val()));
 
                         const saved = model.save(null, {
@@ -70,7 +69,7 @@ class EditComponent {
                                 Object.values(data).forEach((value) => value.val(null));
                                 window.location = '/#list';
                             },
-                            error: (model, error, ...errors) => {
+                            error: (model, error) => {
                                 const responseText = JSON.parse(error.responseText);
                                 Swal.fire({
                                     title: 'Error',

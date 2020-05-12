@@ -39,8 +39,6 @@ class App {
      * Construct an App class.
      */
     constructor() {
-        const that = this;
-
         this.backbone = backbone;
 
         this.backbone.logger = winston.createLogger({
@@ -74,7 +72,7 @@ class App {
             initialize() {
                 that.them.fetch();
             },
-            defaultRoute() {
+            defaultRoute: function () {
                 // Scatter the calls over 10 seconds.
                 const interval = Math.ceil(Math.random() * 10000) + (25 * 1000);
                 that.i = setInterval(() => that.them.fetch(), interval);
@@ -177,17 +175,7 @@ $(() => {
     const app = new App(backbone);
 
     const appRouter = new app.Routes();
-    //app.backbone.history.start();
     app.backbone.history.start({
         pushState: false,
     });
-
-    // const component = new BookListComponent(app.backbone, app.them).make();
-    // const container = $('#container');
-    //
-    // if (container.length < 1) {
-    //     throw new Error('Cannot find relevant container?');
-    // }
-    //
-    // container.append(component.render().el);
 });
