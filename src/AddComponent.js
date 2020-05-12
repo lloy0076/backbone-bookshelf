@@ -66,7 +66,7 @@ class AddComponent {
                                 Object.values(data).forEach((value) => value.val(null));
                                 window.location='/#';
                             },
-                            error: (model, error, ...errors) => {
+                            error: (model, error) => {
                                 const responseText = JSON.parse(error.responseText);
                                 Swal.fire({
                                     title: 'Error',

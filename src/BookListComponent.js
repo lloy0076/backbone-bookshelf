@@ -16,10 +16,6 @@
 const _ = require('lodash');
 const Swal = require('sweetalert2');
 
-const moment = require('moment');
-
-const EditComponent = require('./EditComponent');
-
 /**
  * @class BookListComponent
  */
@@ -40,7 +36,7 @@ class BookListComponent {
             {
                 collection,
                 tagName: 'div',
-                render(order = 'asc') {
+                render() {
                     let html = '';
                     if (this.collection.length) {
                         const template = require('./templates/list_item.njk');
@@ -81,7 +77,7 @@ class BookListComponent {
 
                                     });
                                 },
-                                error: (model, error, ...errors) => {
+                                error: (model, error) => {
                                     // A 404 is effectively an 'ok'...
                                     if (error.status === 404) {
                                         Swal.fire({
@@ -114,8 +110,7 @@ class BookListComponent {
      * @return {*}
      */
     make() {
-        const view = new this.view();
-        return view;
+        return new this.view();
     }
 }
 
