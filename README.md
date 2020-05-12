@@ -19,8 +19,17 @@ the list stay up to date. Specifically, a timer using `setInterval` is set for
 25-35 seconds (at random) after which a further request will be made to the
 server.
 
+## RESTFUL Server
+
+Any server that conforms to a RESTFUL server as specified by Backbone JS may be used.
+
+This happens to work well with:
+
+* https://github.com/lloy0076/laravel-bookshelf
+
 ## TODO
 
+- Remove the hardcoded server URL;
 - Write tests;
 - Handle backend errors more gracefully
   - Currently, some backend errors are simply serialised to the user (so they say
