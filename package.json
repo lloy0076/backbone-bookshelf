@@ -1,7 +1,7 @@
 {
-  "name": "webpack-demo",
+  "name": "backbone-bookshelf",
   "version": "1.0.0",
-  "description": "A webpack demo.",
+  "description": "A simple bookshelf written with backbonejs that uses bootstrap for styling",
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -16,14 +16,31 @@
   "dependencies": {
     "backbone": "^1.4.0",
     "backbone-es6-promise": "^1.0.0",
-    "backbone.localstorage": "^2.0.2",
-    "jquery": "^3.5.1",
+    "bootstrap": "^4.4.1",
+    "jquery": "3.0.0",
     "jquery-ajax": "^2.1.4",
     "moment": "^2.25.3",
+    "nunjucks": "^3.2.1",
+    "popper.js": "1.16.0",
+    "sweetalert2": "^9.10.13",
+    "underscore": "^1.10.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "bootstrap-loader": "^3.0.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "no-op": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "nunjucks-loader": "^3.0.0",
+    "nunjucks-webpack-loader": "^1.0.8",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"

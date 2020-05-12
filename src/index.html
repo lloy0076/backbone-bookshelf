@@ -2,12 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="David Lloyd <lloy0076 [at] adam.com.au>">
+    <meta name="email" content="lloy0076 [at] adam.com.au">
+    <meta name="copyright" content="http://www.apache.org/licenses/LICENSE-2.0">
+    <meta name="github-profile" content="https://github.com/lloy0076">
+
     <title>Bookshelf Test</title>
+
+    <style>
+        body {
+            padding-top: 65px;
+        }
+
+        .col-form-label {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bookshelf Test</h1>
-    <div id="container">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#list">Bookshelf&nbsp;|&nbsp;</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#bookshelfNavbar"
+                aria-controls="bookshelfNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="bookshelfNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#list">List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#add">Add</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h1>Bookshelf Test</h1>
+                <div id="container">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
