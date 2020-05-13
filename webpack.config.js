@@ -18,6 +18,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html',
+            scriptLoading: 'defer',
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -29,9 +30,10 @@ module.exports = {
     ],
     devServer: {
         contentBase: './dist',
-        port: 9000,
-        open: true,
         hot: true,
+        historyApiFallback: true,
+        open: true,
+        port: 9000,
     },
     // devtool: 'inline-source-map',
     node: {

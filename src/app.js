@@ -16,6 +16,8 @@
 import('bootstrap');
 import('bootstrap/dist/css/bootstrap.min.css');
 
+require('gasparesganga-jquery-loading-overlay');
+
 const _ = require('lodash');
 const Swal = require('sweetalert2');
 
@@ -23,6 +25,8 @@ const backbone = require('backbone');
 backbone.emulateHTTP = true;
 backbone.$ = $;
 backbone._ = _;
+
+$.LoadingOverlay('show');
 
 const moment = require('moment');
 const winston = require('winston');
@@ -180,6 +184,7 @@ $(() => {
         route: '/;,',
     });
 
+    $.LoadingOverlay('hide');
 
     /**
      * All navigation that is relative should be passed through the navigate
