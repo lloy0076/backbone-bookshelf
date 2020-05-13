@@ -14,6 +14,10 @@ module.exports = {
         filename: '[name].js',
     },
     plugins: [
+        new webpack.DefinePlugin({
+            // Replace THIS with the real server URI; keep the same quote style.
+            'SERVICE_URL': '"http://laravel-bookshelf.test/api/v1/book"',
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',

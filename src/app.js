@@ -167,7 +167,7 @@ class App {
 
         this.Books = this.backbone.Collection.extend({
             model: this.Book,
-            url: 'http://laravel-bookshelf.test/api/v1/book',
+            url: SERVICE_URL,
             comparator: 'title',
         });
 
