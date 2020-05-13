@@ -17,6 +17,7 @@
     "backbone": "^1.4.0",
     "backbone-es6-promise": "^1.0.0",
     "bootstrap": "^4.4.1",
+    "gasparesganga-jquery-loading-overlay": "^2.1.7",
     "jquery": "^3.5.1",
     "jquery-ajax": "^2.1.4",
     "lodash": "^4.17.15",
