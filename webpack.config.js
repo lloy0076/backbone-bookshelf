@@ -33,7 +33,7 @@ module.exports = {
         open: true,
         hot: true,
     },
-    devtool: 'inline-source-map',
+    // devtool: 'inline-source-map',
     node: {
         fs: 'empty',
     },

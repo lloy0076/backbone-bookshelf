@@ -67,7 +67,7 @@ class EditComponent {
                                 });
 
                                 Object.values(data).forEach((value) => value.val(null));
-                                window.location = '/#list';
+                                backbone.history.navigate('list', true);
                             },
                             error: (model, error) => {
                                 const responseText = JSON.parse(error.responseText);
