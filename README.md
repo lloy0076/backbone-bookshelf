@@ -29,11 +29,12 @@ This happens to work well with:
 
 ## CONFIGURATION
 
-Change the `SERVER_URL` value in the `webpack.config.js`.
+Change the `SERVICE_URL` value in the `webpack.config.js`.
 
 The value in the outer quotes will be substituted *verbatim* into the code, so
 to use `http://www.books_api.com` use `'"http://www.books_api.com"'` or 
 `"'http://www.books_api.com/`.
+
 ## TODO
 
 - Write tests;
