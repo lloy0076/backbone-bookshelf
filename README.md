@@ -35,14 +35,22 @@ The value in the outer quotes will be substituted *verbatim* into the code, so
 to use `http://www.books_api.com` use `'"http://www.books_api.com"'` or 
 `"'http://www.books_api.com/`.
 
+When deploying to a web server, any request must be resolved to the `index.html` or
+the non-hash based router will not work; a sample `.htaccess` is:
+
+```
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.html
+```
+
 ## TODO
 
 - Write tests;
 - Handle backend errors more gracefully
   - Currently, some backend errors are simply serialised to the user (so they say
   technically valid but user unfriendly things)
-- Figure out how to use a non-hash router
-  - I tried to get a `pushState` router working, but it refused to play correctly
 - Close the stack collapse on route change in mobile/small screen mode.
 
 ## LICENSE
