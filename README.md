@@ -27,9 +27,15 @@ This happens to work well with:
 
 * https://github.com/lloy0076/laravel-bookshelf
 
+## CONFIGURATION
+
+Change the `SERVER_URL` value in the `webpack.config.js`.
+
+The value in the outer quotes will be substituted *verbatim* into the code, so
+to use `http://www.books_api.com` use `'"http://www.books_api.com"'` or 
+`"'http://www.books_api.com/`.
 ## TODO
 
-- Remove the hardcoded server URL;
 - Write tests;
 - Handle backend errors more gracefully
   - Currently, some backend errors are simply serialised to the user (so they say
