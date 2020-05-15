@@ -33,7 +33,7 @@ Change the `SERVICE_URL` value in the `webpack.config.js`.
 
 The value in the outer quotes will be substituted *verbatim* into the code, so
 to use `http://www.books_api.com` use `'"http://www.books_api.com"'` or 
-`"'http://www.books_api.com/`.
+`"'http://www.books_api.com/'"`.
 
 When deploying to a web server, any request must be resolved to the `index.html` or
 the non-hash based router will not work; a sample `.htaccess` is:
