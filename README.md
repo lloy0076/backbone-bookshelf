@@ -27,6 +27,15 @@ This happens to work well with:
 
 * https://github.com/lloy0076/laravel-bookshelf
 
+The fields expected are:
+
+- id (not required for create)
+- title (required)
+- author (required)
+- format (optional)
+
+The server SHOULD validate for required fields.
+
 ## CONFIGURATION
 
 Change the `SERVICE_URL` value in the `webpack.config.js`.
