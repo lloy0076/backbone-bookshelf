@@ -29,10 +29,10 @@ This happens to work well with:
 
 The fields expected are:
 
-- id (not required for create)
-- title (required)
-- author (required)
-- format (optional)
+- `id` (not required for create)
+- `title` (required)
+- `author` (required)
+- `format` (optional)
 
 The server SHOULD validate for required fields.
 
