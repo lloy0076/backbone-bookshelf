@@ -4,14 +4,17 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const mode = process.env.NODE_ENV || 'development';
+
 module.exports = {
-    mode: 'development',
+    mode,
     entry: {
-        app: './src/app.js',
+        main: './src/main.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
+        publicPath: '/',
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -39,7 +42,7 @@ module.exports = {
         open: true,
         port: 9000,
     },
-    // devtool: 'inline-source-map',
+    devtool: 'inline-source-map',
     node: {
         fs: 'empty',
     },
