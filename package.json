@@ -22,7 +22,7 @@
     "nunjucks": "^3.2.1",
     "popper.js": "1.16.0",
     "sweetalert2": "^9.10.13",
-    "underscore": "^1.10.2",
+    "underscore": "^1.12.1",
     "winston": "^3.2.1"
   },
   "devDependencies": {
